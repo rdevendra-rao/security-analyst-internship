@@ -1,0 +1,13 @@
+Task 1 — Nmap Scan Results
+Target: 127.0.0.1 (localhost)
+
+STATUS: PENDING REAL SCAN
+
+Run these commands in PowerShell:
+nmap 127.0.0.1
+nmap -sV 127.0.0.1
+nmap -O 127.0.0.1
+
+Then replace this file's contents with the actual command output.
+
+Do not submit fabricated scan results.
