@@ -1,24 +1,64 @@
-# Security Analyst Internship — Submission Repository
+# Security Analyst Internship — Task Submissions
 
-This repository contains the research reports prepared for the Security Analyst internship tasks.
+This repository contains my completed work for the Security Analyst Internship.
 
-## Completed tasks
-1. Task 4 — Common Network Security Threats
-2. Task 5 — Social Engineering Attacks
-3. Task 6 — The Importance of Patch Management
+## Completed Tasks
 
-## Practical task starter
-A starter pack for Task 1 (Basic Network Scanning with Nmap) is included in `task1_nmap_starter/`.
-The Nmap output and screenshots must be generated from the student's own authorized machine/VM; they should not be fabricated.
+### Task 1 — Basic Network Scanning with Nmap
+- Performed a basic Nmap scan on my own local machine.
+- Target: `127.0.0.1` (localhost)
+- Performed service/version detection using `nmap -sV`
+- Performed OS detection using `nmap -O`
+- Identified open TCP ports and associated services.
+- Documented security observations for the identified services.
+- Scan results are available in `nmap_scan_results.txt`.
 
-## Files
-- `network_security_threats_report.md`
-- `social_engineering_report.md`
-- `patch_management_report.md`
-- `task1_nmap_starter/README.md`
-- `task1_nmap_starter/nmap_scan.ps1`
-- `task1_nmap_starter/nmap_scan_results.txt`
-- `screenshots/`
+### Task 4 — Common Network Security Threats
+A research report covering:
+- DoS/DDoS attacks
+- Man-in-the-Middle (MITM) attacks
+- IP spoofing
+- DNS poisoning/spoofing
+- Comparison of common network security threats
+- Security mitigation techniques
 
-## Academic / ethical note
-All practical security testing should be performed only against systems owned by the student or systems for which explicit authorization has been provided.
+File: `network_security_threats_report.md`
+
+### Task 5 — Social Engineering Attacks
+A research report covering:
+- Phishing
+- Spear phishing
+- Whaling
+- Vishing
+- Smishing
+- Pretexting
+- Baiting
+- Quid pro quo
+- Security awareness practices
+
+File: `social_engineering_report.md`
+
+### Task 6 — Importance of Patch Management
+A research report covering:
+- Patch management lifecycle
+- CVEs and vulnerability management
+- WannaCry/EternalBlue
+- Equifax breach
+- Consequences of missing security patches
+- Patch management checklist
+- Common patch management challenges
+
+File: `patch_management_report.md`
+
+## Task 1 — Nmap Evidence
+
+Target scanned:
+
+`127.0.0.1` — Localhost
+
+Scans performed:
+
+```text
+nmap 127.0.0.1
+nmap -sV 127.0.0.1
+nmap -O 127.0.0.1
