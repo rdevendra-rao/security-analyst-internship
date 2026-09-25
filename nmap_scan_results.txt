@@ -1,13 +1,56 @@
-Task 1 — Nmap Scan Results
-Target: 127.0.0.1 (localhost)
+TASK 1 - BASIC NETWORK SCANNING WITH NMAP
 
-STATUS: PENDING REAL SCAN
+Target: 127.0.0.1 (localhost / own Windows machine)
+Nmap version: 7.991
 
-Run these commands in PowerShell:
-nmap 127.0.0.1
-nmap -sV 127.0.0.1
-nmap -O 127.0.0.1
+1) BASIC SCAN
+Command: nmap 127.0.0.1
 
-Then replace this file's contents with the actual command output.
+Host is up (0.0010s latency).
+996 TCP ports closed (reset).
 
-Do not submit fabricated scan results.
+Open ports:
+135/tcp   open   msrpc
+445/tcp   open   microsoft-ds
+5357/tcp  open   wsdapi
+12345/tcp open   netbus
+
+Scan time: 0.78 seconds.
+
+2) SERVICE/VERSION DETECTION
+Command: nmap -sV 127.0.0.1
+
+135/tcp   open   msrpc          Microsoft Windows RPC
+445/tcp   open   microsoft-ds?
+5357/tcp  open   wsdapi?
+12345/tcp open   netbus?
+
+Service Info: OS: Windows
+CPE: cpe:/o:microsoft:windows
+Scan time: 22.53 seconds.
+
+3) OS DETECTION
+Command: nmap -O 127.0.0.1
+
+135/tcp   open   msrpc
+445/tcp   open   microsoft-ds
+5357/tcp  open   wsdapi
+12345/tcp open   netbus
+
+Device type: general purpose
+Running: Microsoft Windows 10
+OS CPE: cpe:/o:microsoft:windows_10
+OS details: Microsoft Windows 10 1809 - 21H2
+Network distance: 0 hops
+Scan time: 2.26 seconds.
+
+4) SECURITY OBSERVATIONS
+135/tcp - Windows RPC. Restrict unnecessary exposure with firewall/network controls.
+445/tcp - SMB/Microsoft-DS. Restrict SMB access to trusted networks and keep Windows updated.
+5357/tcp - WSDAPI. Restrict if device-discovery functionality is not required.
+12345/tcp - Nmap identified this as "netbus?" with uncertainty. This does NOT by itself prove NetBus malware is installed; the listening process should be identified locally if unexpected.
+
+5) CONCLUSION
+The localhost scan identified four open TCP ports and Nmap identified the host as Microsoft Windows 10. The scan was performed only against 127.0.0.1, the user's own machine.
+
+IMPORTANT: Include the three real scan screenshots with the submission. Do not claim that the Nmap "netbus?" label proves malware; Nmap service detection is uncertain here
